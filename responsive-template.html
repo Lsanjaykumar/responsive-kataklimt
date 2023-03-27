@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/8d92229b07.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-image: url(images/kataklimt-back.jpg);
+        }
+
+        .box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .container {
+            width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        header {
+            background-color: white;
+        }
+
+        .left {
+            width: 49%;
+            padding: 20px 20px 20px 0;
+            color: rgb(8, 7, 8);
+            font-size: 3em;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .left span {
+            color: palevioletred;
+        }
+
+        .left>:nth-child(3) {
+            font-size: medium;
+            margin: 0;
+        }
+
+        .right {
+            width: 49%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .right>a {
+            text-decoration: none;
+            color: black;
+            padding: 21px;
+        }
+
+        a:hover {
+            background-color: palevioletred;
+            border-radius: 70%;
+        }
+
+        .as {
+            display: flex;
+            justify-content: end;
+            flex-wrap: nowrap;
+        }
+
+        .ls {
+            /* float: left; */
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: end;
+            width: 25%;
+            vertical-align: top;
+            font-size: 4em;
+            color: aliceblue;
+
+        }
+
+        .rs {
+            display: flex;
+            flex-wrap: wrap;
+            width: 66%;
+            vertical-align: top;
+            color: aliceblue;
+            justify-content: space-between;
+        }
+
+        .rs>p>span {
+            color: red;
+        }
+
+        .ac {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: black;
+        }
+
+        .sec1 {
+            padding-bottom: 0 0 36px 0;
+        }
+
+        .sec1>:nth-child(2) {
+            color: gray;
+            padding: 0 50px;
+        }
+
+        .sec1>:nth-child(1) {
+            color: palevioletred;
+        }
+
+        .sec2 {
+            color: white;
+            padding: 0px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .m1,
+        .m2,
+        .m2,
+        .m4 {
+            width: 25%;
+            padding: 10px 10px 40px 10px;
+        }
+
+        .sec3 {
+            color: white;
+            padding: 0 0 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+        }
+
+        main h3 {
+            font-size: 2em;
+        }
+
+        .main-main {
+            width: 25%;
+            padding: 0 0 7px 0;
+        }
+
+        .main1 {
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .main1:nth-child(2) {
+            width: 24%;
+            padding: 30px 0 0 14px;
+            text-align: justify;
+
+        }
+
+        .para :nth-child(1) {
+            color: aliceblue;
+        }
+
+        .para:nth-child(2) {
+            color: grey;
+        }
+
+        ul {
+            line-height: 1.8pc;
+            color: palevioletred;
+            list-style: none;
+            padding: 0 0 0 1px;
+        }
+
+
+        .order {
+            padding: 0 0 0 47px;
+        }
+
+        .main2 {
+            width: 51%;
+            padding: 0 0 0 20px;
+        }
+
+        .ps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding-top: 4px;
+        }
+
+        .ps div {
+            max-width: 28%;
+            padding-bottom: 13px;
+        }
+
+        footer {
+            background-color: white;
+            padding: 30px;
+        }
+
+        .foot {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 80px 0 112px;
+        }
+
+        .f-left {
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .f-right {
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: end;
+        }
+
+        .f-right i {
+            padding: 0 20px 0 0;
+        }
+
+        @media (max-width:576px) {
+            .box {
+                width: 100%;
+            }
+
+            .container {
+                width: 80%;
+                justify-content: center;
+            }
+
+            .right {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+            }
+
+            .left {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .kata {
+                max-width: 100%;
+            }
+
+            .sec1 {
+                width: 70%;
+            }
+
+            .as {
+                width: 100%;
+                display: block;
+            }
+
+            .as .ls {
+                width: 100%;
+                padding: 20px 0 0 100px;
+                display: block;
+            }
+
+            .rs {
+                width: 100%;
+                padding: 0 20px 20px 20px;
+                text-align: justify;
+            }
+
+            .m1,
+            .m2,
+            .m3,
+            .m4 {
+                width: 100%;
+                text-align: center;
+            }
+
+            .main-main,
+            .main1,
+            .main1:nth-child(2) {
+                width: 100%;
+                text-align: center;
+            }
+
+            .main1>div {
+                height: 180px;
+            }
+
+            .unlist {
+                padding: 0 0 0 80px;
+            }
+
+            .main2 {
+                width: 200%;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="box">
+            <div class="container">
+                <div class="left">
+                    <span>K</span>ata<span>K</span>limt
+                    <p>Photograpy</p>
+                </div>
+                <div class="right">
+                    <a href="">About</a>
+                    <a href="">Service</a>
+                    <a href="">Folio</a>
+                    <a href="">Blog</a>
+                    <a href="">content</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <article>
+        <div class="box">
+            <div class="container">
+                <div class="kata">
+                    <img src="images/kataklimt-main.jpg" alt="katamain" width="100%">
+                    <div class="as">
+                        <div class="ls">
+                            <div class="sec1">
+                                <span>W</span>elcome!<span>|</span>
+                            </div>
+                        </div>
+                        <div class="rs">
+                            <p>
+                                <span>Click here</span> with several layout options for desktop, tablet, smartphone
+                                landscape and portrait to fit all popular screen resolutions. The PSD source files of
+                                this template are available for free for the registered members of TemplateMonster.com,
+                                Feel free to get them!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </article>
+    <hr style="margin: 0;">
+    <div class="ac">
+        <div class="container">
+            <div class="box">
+                <div class="sec2">
+                    <div class="m1">
+                        <h3>FASHION</h3>
+                        <img src="images/kataklimt-fasion.jpg" alt="1" width="100%">
+                        <p>At vero eos et accusamus et iusto Odio dignissimos ducimus qui blanditiis praesentium
+                            voluptatum</p>
+                        <div><button
+                                style="background-color:rgba(17, 16, 16, 0.2); padding: 10px; background-color: palevioletred;color: rgb(254, 255, 252); ">Read
+                                More &raquo; </button></div>
+                    </div>
+                    <div class="m2">
+                        <h3>NATURE</h3>
+                        <img src="images/kataklimt-nature.jpg" alt="1" width="100%">
+                        <p>Deleniti atque corrupti quos Dolores equas molestias excepturi sintoccaecati cupiditate non
+                        </p>
+                        <div><button
+                                style="background-color:rgba(17, 16, 16, 0.2); padding: 10px; background-color: palevioletred;color: rgb(254, 255, 252); ">Read
+                                More &raquo; </button></div>
+                    </div>
+                    <div class="m2">
+                        <h3>LOVE STORY</h3>
+                        <img src="images/kataklimt-love.jpg" alt="1" width="100%">
+                        <p>Similique sunt in culpa qui officia Deserunt mollitia animi, id est laborumet dolorum fuga
+                        </p>
+                        <div><button
+                                style="background-color:rgba(17, 16, 16, 0.2); padding: 10px; background-color: palevioletred;color: rgb(254, 255, 252); ">Read
+                                More &raquo; </button></div>
+                    </div>
+                    <div class="m2">
+                        <h3>FINE ART</h3>
+                        <img src="images/kataklimt-fine.jpg" alt="1" width="100%">
+                        <p>Similique sunt in culpa qui officia Deserunt mollitia animi, id est laborumet dolorum fuga.
+                        </p>
+                        <div><button
+                                style="background-color:rgba(17, 16, 16, 0.2); padding: 10px; background-color: palevioletred;color: rgb(254, 255, 252); ">Read
+                                More &raquo; </button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr style=" margin: 0;">
+    <main>
+        <div class="container">
+            <div class="sec3">
+                <div class="main-main">
+                    <h3>Short about me</h3>
+                    <img src="images/kataklimt-short.jpg" alt="short" width="100%">
+                </div>
+                <div class="main1">
+                    <div style="height: 50px;"></div>
+                    <div class="para">
+                        <p>Sed ut perspictis unde omnis natus error volupatem accusantium
+                            doloue laudantium, totam rem.
+                        </p>
+                        <p>Aperiam, eaque ipsa quae ab illo veritatis et unde natus error
+                            volupatem accusantium doloue
+                            laudantium, totam rem.nemo enim ipsam voluptatem quia voluptas
+                        </p>
+                        <hr>
+                    </div>
+                    <div class="unlist">
+                        <ul>
+                            <li>&#8669; Campaigns</li>
+                            <li>&#8669; Portrait</li>
+                            <li>&#8669; Fashion</li>
+                            <li>&#8669; Fine Art</li>
+                        </ul>
+                    </div>
+                    <div class="order">
+                        <ul>
+                            <li> &#8669; Advertising</li>
+                            <li> &#8669; Lifesttyle</li>
+                            <li> &#8669; Lovestory</li>
+                            <li> &#8669; Landscapes</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main2">
+                    <h3>Latest Photoshoots</h3>
+                    <div class="photos">
+                        <div class="ps">
+                            <div><img src="images/kataklimt-last-r1-c1.jpg" alt="rc1"></div>
+                            <div><img src="images/kataklimt-last-r1-c2.jpg" alt="rc1-c2">
+                            </div>
+                            <div><img src="images/kataklimt-r1-c3.jpg" alt="rc1-c3"></div>
+                            <div><img src="images/kataklimt-r1-c4.jpg" alt="rc1-c4"></div>
+
+                            <div><img src="images/kataklimt-r2-c1.jpg" alt="rc1"></div>
+                            <div><img src="images/kataklimt-r2-c2.jpg" alt="rc1"></div>
+                            <div><img src="images/kataklimt-r2-c3.jpg" alt="rc1"></div>
+                            <div><img src="images/kataklimt-r2-c4.jpg" alt="rc1"></div>
+
+                            <div><img src="images/kataklimt-r3-c1.jpg" alt="rc1"></div>
+                            <div><img src="images/kataklimt-r3-c2.jpg" alt="rc1"></div>
+                            <div><img src="images/kataklimt-r3-c3.jpg" alt="rc1"></div>
+                            <div><img src="images/kataklimt-r3-c4.jpg" alt="rc1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="foot">
+            <div class="f-left">
+                &copy; Copyright 2023
+            </div>
+            <div class="f-right">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-github"></i>
+                <i class="fa-brands fa-google-plus-g"></i>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
